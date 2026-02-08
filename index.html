@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zani’s Eatery | Premium Fast Food</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #0f0f0f;
+      color: #fff;
+      line-height: 1.6;
+      padding-bottom: 70px;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    header {
+      padding: 60px 20px;
+      text-align: center;
+      background:
+        linear-gradient(to bottom, rgba(0,0,0,.85), #0f0f0f),
+        url("https://images.unsplash.com/photo-1550547660-d9450f859349") center/cover;
+    }
+
+    header h1 {
+      font-size: 2.6rem;
+      color: #ff2f2f;
+    }
+
+    header p {
+      margin-top: 10px;
+      font-size: 1.1rem;
+      opacity: .9;
+    }
+
+    .status {
+      margin-top: 15px;
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: .9rem;
+      font-weight: bold;
+    }
+
+    .open { background: #1f8f4a; }
+    .closed { background: #7a1c1c; }
+
+    .cta {
+      margin-top: 30px;
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .cta a {
+      padding: 12px 22px;
+      border-radius: 30px;
+      background: #ff2f2f;
+      font-weight: bold;
+      transition: .3s;
+    }
+
+    .cta a.secondary {
+      background: transparent;
+      border: 1px solid #ff2f2f;
+    }
+
+    .cta a:hover {
+      transform: scale(1.05);
+      opacity: .9;
+    }
+
+    section {
+      padding: 55px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 2rem;
+      color: #ff2f2f;
+    }
+
+    /* MENU PREVIEW */
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+    }
+
+    .menu-card {
+      background: #1a1a1a;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: .3s;
+    }
+
+    .menu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 30px rgba(255,47,47,.25);
+    }
+
+    .menu-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .menu-content {
+      padding: 22px;
+    }
+
+    .price {
+      color: #ffc107;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    /* FULL MENU IMAGE */
+    .full-menu img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 12px 40px rgba(0,0,0,.6);
+    }
+
+    .hint {
+      text-align: center;
+      opacity: .8;
+      margin-top: 10px;
+      font-size: .9rem;
+    }
+
+    /* REVIEWS */
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 22px;
+    }
+
+    .review {
+      background: #1a1a1a;
+      padding: 22px;
+      border-radius: 15px;
+    }
+
+    .stars {
+      color: #ffc107;
+      margin-bottom: 8px;
+    }
+
+    .contact {
+      text-align: center;
+      opacity: .95;
+    }
+
+    .contact p {
+      margin-bottom: 10px;
+    }
+
+    .bottom-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background: #0c0c0c;
+      display: flex;
+      justify-content: space-around;
+      padding: 12px 0;
+      border-top: 1px solid #222;
+      z-index: 99;
+    }
+
+    .bottom-bar a {
+      font-size: .9rem;
+      color: #ff2f2f;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Zani’s Eatery</h1>
+  <p>Bold Flavors. Premium Taste.</p>
+
+  <div id="statusBadge" class="status">Checking status…</div>
+
+  <div class="cta">
+    <a href="https://wa.me/27834103292?text=Hi%20Zani’s%20Eatery,%20I’d%20like%20to%20place%20an%20order." target="_blank">
+      Order Online
+    </a>
+    <a class="secondary" href="tel:+27834103292">Call</a>
+    <a class="secondary" href="https://www.instagram.com/zani_eatery?igsh=MW9qam16dmM2ajh0cQ==" target="_blank">
+      Instagram
+    </a>
+  </div>
+</header>
+
+<!-- FEATURED ITEMS -->
+<section>
+  <h2>Customer Favorites</h2>
+
+  <div class="menu-grid">
+    <div class="menu-card">
+      <img src="https://i.ibb.co/JRbWXKJB/Screenshot-20260208-205422-1.jpg">
+      <div class="menu-content">
+        <h3>Triple Cheeseburger with Fries</h3>
+        <div class="price">R90</div>
+      </div>
+    </div>
+
+    <div class="menu-card">
+      <img src="https://i.ibb.co/mVGtzScJ/Screenshot-20260208-205428-1.jpg">
+      <div class="menu-content">
+        <h3>Double Patty Dawgwood & Wings</h3>
+        <div class="price">R130</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FULL MENU IMAGE -->
+<section class="full-menu">
+  <h2>Full Menu</h2>
+  <a href="https://i.ibb.co/S4660Hc7/Screenshot-20260208-210443-1.jpg" target="_blank">
+    <img src="https://i.ibb.co/S4660Hc7/Screenshot-20260208-210443-1.jpg" alt="Zani’s Eatery Menu">
+  </a>
+  <p class="hint">Tap the menu to view in full size</p>
+</section>
+
+<section>
+  <h2>What People Are Saying</h2>
+  <div class="reviews">
+    <div class="review">
+      <div class="stars">★★★★☆</div>
+      <strong>Dimakatso Nkadimeng</strong>
+      <p>Food is great, very delicious. Quick and friendly staff.</p>
+    </div>
+
+    <div class="review">
+      <div class="stars">★★★★★</div>
+      <strong>Samuel Mnguni</strong>
+      <p>Great food. Premium taste.</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact">
+  <h2>Visit Us</h2>
+  <p>📍 105 Sebobane St, Monise, Katlehong, South Africa</p>
+  <p>📞 +27 83 410 3292</p>
+  <p>🍔 Fast Food Restaurant · Wheelchair Accessible</p>
+</section>
+
+<div class="bottom-bar">
+  <a href="https://wa.me/27834103292?text=Hi%20Zani’s%20Eatery,%20I’d%20like%20to%20place%20an%20order." target="_blank">Order</a>
+  <a href="tel:+27834103292">Call</a>
+  <a href="https://www.instagram.com/zani_eatery?igsh=MW9qam16dmM2ajh0cQ==" target="_blank">Instagram</a>
+  <a href="https://maps.google.com/?q=105+Sebobane+St+Katlehong" target="_blank">Directions</a>
+</div>
+
+<script>
+  const openingHours = [
+    { day: 1, open: 11, close: 21 },
+    { day: 2, open: 11, close: 21 },
+    { day: 3, open: 11, close: 21 },
+    { day: 4, open: 11, close: 21 },
+    { day: 5, open: 11, close: 22 },
+    { day: 6, open: 11, close: 22 }
+  ];
+
+  const now = new Date();
+  const today = now.getDay();
+  const hour = now.getHours();
+  const badge = document.getElementById("statusBadge");
+
+  const todayHours = openingHours.find(d => d.day === today);
+
+  if (todayHours && hour >= todayHours.open && hour < todayHours.close) {
+    badge.textContent = "Open Now";
+    badge.classList.add("open");
+  } else {
+    badge.textContent = "Closed · Opens 11 AM";
+    badge.classList.add("closed");
+  }
+</script>
+
+</body>
+</html>
